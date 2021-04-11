@@ -3,7 +3,7 @@ import store from '../store/store';
 import router from '../router';
 
 
-const BASEURL = process.env.NODE_ENV === 'production' ? '/api' : '/api'
+//const BASEURL = process.env.NODE_ENV === 'production' ? '/api' : '/api'
 /**
  * 开发 & 测试环境，接口超时（3秒）会给出提示
  * 根据请求的url注册
@@ -13,14 +13,14 @@ const BASEURL = process.env.NODE_ENV === 'production' ? '/api' : '/api'
 
 /** 创建axios实例 */
 // eslint-disable-next-line no-unused-expressions
-axios.defaults.headers['Content-Type']='application/json';
-//axios.defaults.headers['Content-Type']='multipart/form-data';
+// axios.defaults.headers['Content-Type']='application/json';
+axios.defaults.headers['Content-Type']='multipart/form-data';
 const service = axios.create({
   //baseURL: '', // api 的 base_url
   timeout: 1000 * 10, // 请求超时时间
   withCredentials: true,
   headers: {
-    'content-type': 'application/json',
+    'content-type': 'multipart/form-data',
   },
 });
 

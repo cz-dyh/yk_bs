@@ -2,7 +2,7 @@
     <div>
 
         <div class="imgdiv">
-            <img class="ordericon-img" src="../../../../base_cli/src/images/yy.png" alt="">
+            <img class="ordericon-img" src="../../images/yy.png" alt="">
         </div>
         <h3 class="ordertitle-h3">预约图书</h3>
         <hr class="orderbook-hr"/>

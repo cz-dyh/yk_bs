@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="imgDiv">
-            <img src="../../../../base_cli/src/images/p.png"  class="logo" >
+            <img src="../../images/p.png"  class="logo" >
         </div>
         <h3 class="logo-h3">注&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;册</h3>
         <hr class="hr-class"/>

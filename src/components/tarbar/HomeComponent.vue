@@ -2,9 +2,9 @@
     <div>
         <!--轮播区域-->
         <mt-swipe :auto="4000" class="swipe-box">
-            <mt-swipe-item><img  class="swippho" src="../../../../base_cli/src/images/p1.png"></mt-swipe-item>
-            <mt-swipe-item><img  class="swippho" src="../../../../base_cli/src/images/p2.png"></mt-swipe-item>
-            <mt-swipe-item><img  class="swippho" src="../../../../base_cli/src/images/p3.png"></mt-swipe-item>
+            <mt-swipe-item><img  class="swippho" src="../../images/p1.png"></mt-swipe-item>
+            <mt-swipe-item><img  class="swippho" src="../../images/p2.png"></mt-swipe-item>
+            <mt-swipe-item><img  class="swippho" src="../../images/p3.png"></mt-swipe-item>
         </mt-swipe>
         <!--图书馆公告-->
         <div class="gonggao">

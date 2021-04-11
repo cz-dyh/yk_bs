@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="imgDiv">
-            <img src="../../../../base_cli/src/images/books.png" alt="" class="logo" >
+            <img src="../../images/books.png" alt="" class="logo" >
         </div>
         <h3 class="logo-h3">用 户 登 陆</h3>
         <hr class="hr-class"/>
@@ -26,8 +26,10 @@
 </template>
 
 <script>
+    import {login} from '@api/commonApis'
     import {Toast} from 'mint-ui'
     import {setCookie,getCookie} from '../../assets/js/cookie.js'
+    import axios from 'axios'
     export default {
         name: "login",
         mounted(){
@@ -53,8 +55,13 @@
                     //let data = {'username':this.userinfo.username,'password':this.userinfo.password}
                    var tusername=this.userinfo.username;
                     var tpassword=this.userinfo.password;
+
+                    let data=new FormData()
+                    data.append('username',tusername)
+                    data.append('password',tpassword)
                     /*接口请求*/
-                    this.$http.get('api/login?username='+tusername+'&password='+tpassword).then((res)=>{
+                  // axios.post('http://localhost:8080/user/login',data)
+                      login(data).then((res)=>{
                         console.log(res);
                         console.log(res.body.message);
                         if(res.status===200){

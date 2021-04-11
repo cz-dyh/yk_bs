@@ -2,11 +2,11 @@
     <div>
             <div class="title-index">
                 <p class="title-index-p">
-                    <img src="../../../../base_cli/src/images/ts.png" width="25px" height="25px" style="  display: inline-block;vertical-align: middle;">
+                    <img src="../../images/ts.png" width="25px" height="25px" style="  display: inline-block;vertical-align: middle;">
                     <span>图书名称：{{bookname}}</span>
                 </p>
                 <p class="title-index-p"    >
-                    <img src="../../../../base_cli/src/images/no.png" width="25px" height="25px" style="  display: inline-block;vertical-align: middle;">
+                    <img src="../../images/no.png" width="25px" height="25px" style="  display: inline-block;vertical-align: middle;">
                     <span>ISBN：{{bookisbn}}</span>
                 </p>
 
@@ -35,7 +35,7 @@
             <!--页脚，放置补充信息或支持的操作-->
             <div class="mui-card-footer">
                 <div v-show="item.displaycomment==='N'">
-                    <img src="../../../../base_cli/src/images/qx.png" width="25px" heigt="25px"  style="  display: inline-block;vertical-align: middle;">
+                    <img src="../../images/qx.png" width="25px" heigt="25px"  style="  display: inline-block;vertical-align: middle;">
                     <span style="color: red;line-height:30px ">评论已删除</span>
                 </div>
                 <mt-button @click="delcomment(item.kid)" v-show="item.displaycomment==='Y'" class="bcm-btn" size="small" type="danger" plain>删除评论</mt-button>

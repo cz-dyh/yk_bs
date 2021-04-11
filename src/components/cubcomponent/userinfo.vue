@@ -2,26 +2,26 @@
     <div>
 
         <div class="myicon">
-            <img src="../../../../base_cli/src/images/yh.png" class="myicon-img">
+            <img src="../../images/yh.png" class="myicon-img">
         </div>
         <h1 class="userinfo-h3">{{username}}&nbsp;你好！</h1>
         <!--默认进入展示模式--->
         <ul class="mui-table-view" v-show="flag">
             <mt-cell title="用户名：">
                 <span class="info-span">{{username}}</span>
-                <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-username.png" width="25" height="25">
+                <img class="info-icon" slot="icon" src="../../images/info-username.png" width="25" height="25">
             </mt-cell>
             <mt-cell title="邮 箱：">
                 <span class="info-span">{{email}}</span>
-                <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-email.png" width="25" height="25">
+                <img class="info-icon" slot="icon" src="../../images/info-email.png" width="25" height="25">
             </mt-cell>
             <mt-cell title="手机号：">
                 <span class="info-span">{{phone}}</span>
-                <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-phone.png" width="25" height="25">
+                <img class="info-icon" slot="icon" src="../../images/info-phone.png" width="25" height="25">
             </mt-cell>
             <mt-cell title="权限：">
                 <span class="info-span">{{userps}}</span>
-                <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-userps.png" width="25" height="25">
+                <img class="info-icon" slot="icon" src="../../images/info-userps.png" width="25" height="25">
             </mt-cell>
         </ul>
 
@@ -30,19 +30,19 @@
             <ul class="mui-table-view" >
                 <mt-cell title="用户名：">
                     <span class="info-span">{{username}}</span>
-                    <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-username.png" width="25" height="25">
+                    <img class="info-icon" slot="icon" src="../../images/info-username.png" width="25" height="25">
                 </mt-cell>
                 <mt-cell title="邮 箱：">
-                    <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-email.png" width="25" height="25">
+                    <img class="info-icon" slot="icon" src="../../images/info-email.png" width="25" height="25">
                     <input class="infoinput" type="text"  v-model="email">
                 </mt-cell>
                 <mt-cell title="手机号：">
                     <input class="infoinput" type="text"  v-model="phone">
-                    <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-phone.png" width="25" height="25">
+                    <img class="info-icon" slot="icon" src="../../images/info-phone.png" width="25" height="25">
                 </mt-cell>
                 <mt-cell title="权限：">
                     <span class="info-span">{{userps}}</span>
-                    <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/info-userps.png" width="25" height="25">
+                    <img class="info-icon" slot="icon" src="../../images/info-userps.png" width="25" height="25">
                 </mt-cell>
             </ul>
             <mt-button size="large"  class="mybutton1" @click="reflashUser" >提交修改</mt-button>
@@ -62,11 +62,11 @@
             <h3 class="upadtepwd-h3">修改用户密码</h3>
             <mt-cell title="新密码">
                 <input class="infoinput" type="password"  v-model="password">
-                <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/pwd.png" width="25" height="25">
+                <img class="info-icon" slot="icon" src="../../images/pwd.png" width="25" height="25">
             </mt-cell>
             <mt-cell title="确认密码">
                 <input class="infoinput" type="password"  v-model="password1">
-                <img class="info-icon" slot="icon" src="../../../../base_cli/src/images/pwd.png" width="25" height="25">
+                <img class="info-icon" slot="icon" src="../../images/pwd.png" width="25" height="25">
             </mt-cell>
             <mt-button size="large"  class="mybutton1" @click="updatepwd" >提交修改</mt-button>
             <mt-button size="large"  class="mybutton1" @click="back" >返&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;回</mt-button>

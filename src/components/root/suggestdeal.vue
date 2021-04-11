@@ -14,8 +14,8 @@
                             <p class="text-p">反馈内容：{{item.suggestinfo}}</p>
                             <p class="text-p">
                                 处理进程：
-                                <img v-show="item.isok==='正在等待处理'" src="../../../../base_cli/src/images/dd.png" width="25px" height="25px" class="myorder-icon">
-                                <img v-show="item.isok==='已处理'" src="../../../../base_cli/src/images/ok.png" width="25px" height="25px" class="myorder-icon">
+                                <img v-show="item.isok==='正在等待处理'" src="../../images/dd.png" width="25px" height="25px" class="myorder-icon">
+                                <img v-show="item.isok==='已处理'" src="../../images/ok.png" width="25px" height="25px" class="myorder-icon">
                                 {{item.isok}}
                             </p>
                             <div v-show="item.isok==='已处理'">
@@ -35,8 +35,8 @@
                             <p class="text-p">反馈内容：{{item.suggestinfo}}</p>
                             <p class="text-p">
                                 处理进程：
-                                <img v-show="item.isok==='正在等待处理'" src="../../../../base_cli/src/images/dd.png" width="25px" height="25px" class="myorder-icon">
-                                <img v-show="item.isok==='已处理'" src="../../../../base_cli/src/images/ok.png" width="25px" height="25px" class="myorder-icon">
+                                <img v-show="item.isok==='正在等待处理'" src="../../images/dd.png" width="25px" height="25px" class="myorder-icon">
+                                <img v-show="item.isok==='已处理'" src="../../images/ok.png" width="25px" height="25px" class="myorder-icon">
                                 {{item.isok}}
                             </p>
                             <div v-show="item.isok==='已处理'">

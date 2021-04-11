@@ -2,7 +2,7 @@
     <div class="member-container">
         <h3 class="myicon-heartext">欢迎访问图书馆</h3>
         <div class="myicon">
-            <img src="../../../../base_cli/src/images/yh.png" class="myicon-img">
+            <img src="../../images/yh.png" class="myicon-img">
         </div>
         <h3 class="myicon-h3">欢迎用户</h3>
         <h4 class="myicon-h3">{{name}}</h4>

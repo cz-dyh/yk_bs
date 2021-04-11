@@ -4,7 +4,7 @@
                     leave-active-class="animated slideOutUp" appear>
             <div>
                 <div class="imgDiv">
-                    <img src="../../../../base_cli/src/images/error.png"  class="logo"  >
+                    <img src="../../images/error.png"  class="logo"  >
                 </div>
                 <div>
                     <h3 class="error-h2">亲爱的用户请登陆后再访问操作</h3>

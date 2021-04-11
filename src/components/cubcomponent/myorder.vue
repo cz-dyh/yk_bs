@@ -19,10 +19,10 @@
                     <p class="mycomment-pl-p">预约取书时间：{{item.recivertime|dataFormat}}</p>
                     <p class="mycomment-pl-p" >
                         预约情况：{{item.isok}}
-                        <img v-show="item.isok==='完成'" src="../../../../base_cli/src/images/ok.png" width="25px" height="25px" class="myorder-icon">
-                        <img v-show="item.isok==='待审核'" src="../../../../base_cli/src/images/dd.png" width="25px" height="25px" class="myorder-icon">
-                        <img v-show="item.isok==='已取消'" src="../../../../base_cli/src/images/qx.png" width="25px" height="25px" class="myorder-icon">
-                        <img v-show="item.isok==='等待取书'" src="../../../../base_cli/src/images/kyjs.png" width="25px" height="25px" class="myorder-icon">
+                        <img v-show="item.isok==='完成'" src="../../images/ok.png" width="25px" height="25px" class="myorder-icon">
+                        <img v-show="item.isok==='待审核'" src="../../images/dd.png" width="25px" height="25px" class="myorder-icon">
+                        <img v-show="item.isok==='已取消'" src="../../images/qx.png" width="25px" height="25px" class="myorder-icon">
+                        <img v-show="item.isok==='等待取书'" src="../../images/kyjs.png" width="25px" height="25px" class="myorder-icon">
                     </p>
                 </div>
             </div>

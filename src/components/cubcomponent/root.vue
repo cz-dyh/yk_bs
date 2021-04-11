@@ -8,23 +8,23 @@
         <div class="gg-box">
             <ul class="mui-table-view mui-grid-view mui-grid-9">
                 <router-link to="/member/su/root/uAd" tag="li" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                   <img src="../../../../base_cli/src/images/ugl.png" class="icon-box-9">
+                   <img src="../../images/ugl.png" class="icon-box-9">
                     <div class="mui-media-body">用户管理</div></a></router-link>
                 <router-link to="/member/su/root/oAd" tag="li" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                    <img src="../../../../base_cli/src/images/yysh.png" class="icon-box-9">
+                    <img src="../../images/yysh.png" class="icon-box-9">
                     <div class="mui-media-body">预约审核</div></a></router-link>
                 <router-link to="/member/su/root/cAd" tag="li" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                    <img src="../../../../base_cli/src/images/plcom.png" class="icon-box-9">
+                    <img src="../../images/plcom.png" class="icon-box-9">
                     <div class="mui-media-body">评论管理</div></a></router-link>
                 <router-link to="/member/su/root/lAd" tag="li" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                    <img src="../../../../base_cli/src/images/gccx.png" class="icon-box-9">
+                    <img src="../../images/gccx.png" class="icon-box-9">
                     <div class="mui-media-body">馆藏管理</div></a></router-link>
                 <router-link to="/member/su/root/ubAd" tag="li" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3"><a href="#">
-                    <img src="../../../../base_cli/src/images/sjts.png" class="icon-box-9">
+                    <img src="../../images/sjts.png" class="icon-box-9">
                     <div class="mui-media-body">上架图书</div></a></router-link>
                 <router-link  to="/member/su/root/suggestdeal" tag="li" class="mui-table-view-cell mui-media mui-col-xs-4 mui-col-sm-3">
                     <a href="#">
-                    <img src="../../../../base_cli/src/images/bugfk.png" class="icon-box-9">
+                    <img src="../../images/bugfk.png" class="icon-box-9">
                     <div class="mui-media-body">反馈处理</div></a></router-link>
             </ul>
         </div>

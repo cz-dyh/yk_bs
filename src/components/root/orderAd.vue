@@ -15,16 +15,16 @@
                         <p class="p-text">预约提交时间：{{item.ordertime|dataFormat}}</p>
                         <p class="p-text">预约取书时间：{{item.recivertime|dataFormat}}</p>
                         <p class="p-text">当前状态：{{item.isok}}
-                            <img v-show="item.isok==='完成'" src="../../../../base_cli/src/images/ok.png" width="25px" height="25px" class="myorder-icon">
-                            <img v-show="item.isok==='待审核'" src="../../../../base_cli/src/images/dd.png" width="25px" height="25px" class="myorder-icon">
-                            <img v-show="item.isok==='已取消'" src="../../../../base_cli/src/images/qx.png" width="25px" height="25px" class="myorder-icon">
-                            <img v-show="item.isok==='等待取书'" src="../../../../base_cli/src/images/kyjs.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='完成'" src="../../images/ok.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='待审核'" src="../../images/dd.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='已取消'" src="../../images/qx.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='等待取书'" src="../../images/kyjs.png" width="25px" height="25px" class="myorder-icon">
                         </p>
                     </div>
                 </div>
                 <div class="mui-card-footer" v-show="item.isok==='待审核'">
-                    <mt-button size="small" type="primary" plain @click="aggreorder(item.id)"><img src="../../../../base_cli/src/images/ok.png" width="20px" height="20px" class="myorder-icon">同意预约申请</mt-button>
-                    <mt-button size="small" type="danger" plain @click="delorder(item.id)"><img src="../../../../base_cli/src/images/qx.png" width="20px" height="20px" class="myorder-icon">拒绝预约申请</mt-button>
+                    <mt-button size="small" type="primary" plain @click="aggreorder(item.id)"><img src="../../images/ok.png" width="20px" height="20px" class="myorder-icon">同意预约申请</mt-button>
+                    <mt-button size="small" type="danger" plain @click="delorder(item.id)"><img src="../../images/qx.png" width="20px" height="20px" class="myorder-icon">拒绝预约申请</mt-button>
                 </div>
             </div>
             <div v-show="allorderlist===true">
@@ -36,16 +36,16 @@
                         <p class="p-text">预约提交时间：{{item.ordertime|dataFormat}}</p>
                         <p class="p-text">预约取书时间：{{item.recivertime|dataFormat}}</p>
                         <p class="p-text">当前状态：{{item.isok}}
-                            <img v-show="item.isok==='完成'" src="../../../../base_cli/src/images/ok.png" width="25px" height="25px" class="myorder-icon">
-                            <img v-show="item.isok==='待审核'" src="../../../../base_cli/src/images/dd.png" width="25px" height="25px" class="myorder-icon">
-                            <img v-show="item.isok==='已取消'" src="../../../../base_cli/src/images/qx.png" width="25px" height="25px" class="myorder-icon">
-                            <img v-show="item.isok==='等待取书'" src="../../../../base_cli/src/images/kyjs.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='完成'" src="../../images/ok.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='待审核'" src="../../images/dd.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='已取消'" src="../../images/qx.png" width="25px" height="25px" class="myorder-icon">
+                            <img v-show="item.isok==='等待取书'" src="../../images/kyjs.png" width="25px" height="25px" class="myorder-icon">
                         </p>
                     </div>
                 </div>
                 <div class="mui-card-footer" v-show="item.isok==='待审核'">
-                    <mt-button size="small" type="primary" plain @click="aggreorder(item.id)"><img src="../../../../base_cli/src/images/ok.png" width="20px" height="20px" class="myorder-icon">同意预约申请</mt-button>
-                    <mt-button size="small" type="danger" plain @click="delorder(item.id)"><img src="../../../../base_cli/src/images/qx.png" width="20px" height="20px" class="myorder-icon">拒绝预约申请</mt-button>
+                    <mt-button size="small" type="primary" plain @click="aggreorder(item.id)"><img src="../../images/ok.png" width="20px" height="20px" class="myorder-icon">同意预约申请</mt-button>
+                    <mt-button size="small" type="danger" plain @click="delorder(item.id)"><img src="../../images/qx.png" width="20px" height="20px" class="myorder-icon">拒绝预约申请</mt-button>
                 </div>
             </div>
     </div>

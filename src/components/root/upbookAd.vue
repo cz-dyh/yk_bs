@@ -3,7 +3,7 @@
     <div>
         <div>
 
-            <h3 class="upbook-title"><img src="../../../../base_cli/src/images/sjts.png" class="upbook-icon" width="40px" height="40px">上架图书</h3>
+            <h3 class="upbook-title"><img src="../../images/sjts.png" class="upbook-icon" width="40px" height="40px">上架图书</h3>
         </div>
         <div class="form-box">
             <ul class="mui-table-view">
