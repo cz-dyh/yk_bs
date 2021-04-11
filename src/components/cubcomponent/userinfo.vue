@@ -78,6 +78,10 @@
 <script>
     import {setCookie,getCookie,delCookie} from '../../assets/js/cookie.js'
     import {Toast} from 'mint-ui';
+    import axios from 'axios'
+    import {userinfo} from '@api/commonApis'
+    import {updateuserinfo} from '@api/commonApis'
+    import {updateuserinfopwd} from '@api/commonApis'
     export default {
         name: "userinfo",
         data(){
@@ -95,14 +99,16 @@
         },
         methods:{
             getuserinfo(){
-                this.$http.get('api/userinfo?username='+this.username).then((res)=>{
+                let data=new FormData();
+                data.append('username',this.username)
+                userinfo(data).then((res)=>{
                     console.log(res);
-                    console.log(res.body.message);
-                    this.email=res.body.message.email;
-                    this.phone=res.body.message.phone;
-                    if(parseInt(res.body.message.userps)===1){
+                    console.log(res.data);
+                    this.email=res.data.email;
+                    this.phone=res.data.phone;
+                    if(parseInt(res.data.userps)===1){
                         this.userps='普通用户';
-                    }else if(res.body.message.userps==='admin'){
+                    }else if(res.data.userps==='admin'){
                         this.userps='超级管理员';
                     }
 
@@ -122,10 +128,14 @@
                 this.flag1=!this.flag1;
                 this.flag=!this.flag;
 
-                let data = {'username':this.username,'email':this.email,'phone':this.phone};
-                this.$http.post('api/updateuserinfo',data).then((res)=>{
+
+                let data=new FormData();
+                data.append('username',this.username);
+                data.append('email',this.email);
+                data.append('phone',this.phone);
+                updateuserinfo(data).then((res)=>{
                         console.log(res);
-                        console.log(res.body);
+                        console.log(res);
                         if(res.status === 200){
                             this.getuserinfo();
                             Toast("更新信息成功！");
@@ -134,10 +144,13 @@
             },
             updatepwd(){
                 if(this.password===this.password1){
-                    let data = {'username':this.username,'password':this.password};
-                    this.$http.post('api/updateuserinfopwd',data).then((res)=>{
+
+                    let data=new FormData();
+                    data.append('username',this.username);
+                    data.append('password',this.password);
+                    updateuserinfopwd(data).then((res)=>{
                         console.log(res);
-                        console.log(res.body);
+                        console.log(res);
                         if(res.status === 200){
                             Toast("更新密码成功！");
                             this.$router.go(-1)

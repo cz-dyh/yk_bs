@@ -41,10 +41,10 @@
 
 <script>
 
-    import {Toast} from "mint-ui";
-    import { DatetimePicker } from 'mint-ui';
-
-    import {getCookie} from '../../assets/js/cookie.js'
+  import {getBookById} from '@api/commonApis'
+  import {Toast} from 'mint-ui'
+  import {setCookie,getCookie} from '../../assets/js/cookie.js'
+  import axios from 'axios'
     export default {
         name: "ordeBook",
         data(){
@@ -77,10 +77,12 @@
                 this.$router.go(-1);
             },
             getBookInfo(id){
-                this.$http.get("api/bookinfo?id="+id).then(result=>{
+                let data=new FormData();
+                data.append("id",id);
+                getBookById(data).then(result=>{
                     if(result.status===200){
-                        this.bookInfoList=result.body.message;
-                        console.log(result.body.message);
+                        this.bookInfoList=result.data;
+                        console.log(result.data);
                     }
                 });
 

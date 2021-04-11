@@ -41,8 +41,10 @@
 </template>
 
 <script>
-    import {getCookie} from "../../assets/js/cookie";
-    import {Toast} from "mint-ui";
+  import {getUserOrder} from '@api/commonApis'
+  import {Toast} from 'mint-ui'
+  import {setCookie,getCookie} from '../../assets/js/cookie.js'
+  import axios from 'axios'
 
     export default {
         name: "myorder",
@@ -57,15 +59,17 @@
         methods:{
             getMyOrder(){
                 var name = getCookie('username');
+                let data=new FormData();
+                data.append("username",name);
                 //  console.log("http://127.0.0.1:5000/api/getuserorder?username="+name);
-                this.$http.get("api/getuserorder?username="+name).then(result=>{
+                getUserOrder(data).then(result=>{
                     if(result.status===200){
-                        console.log(result.body);
-                        if(result.body.message.length===0)
+                        console.log(result);
+                        if(result.data.length===0)
                             this.flag=true;
                         else {
                             // console.log('/***********'+this.Mycomments)
-                            this.Myorder=result.body.message
+                            this.Myorder=result.data
                             this.Myorder.forEach(item=>{
                                 if(item.isok==='Y'){
                                     item.isok='完成';

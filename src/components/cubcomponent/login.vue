@@ -56,20 +56,24 @@
                    var tusername=this.userinfo.username;
                     var tpassword=this.userinfo.password;
 
-                    let data=new FormData()
-                    data.append('username',tusername)
-                    data.append('password',tpassword)
+                    // let data={
+                    //   username:tusername,
+                    //   password:tpassword
+                    // }
+                    let data=new FormData();
+                    data.append('username',tusername);
+                    data.append('password',tpassword);
                     /*接口请求*/
                   // axios.post('http://localhost:8080/user/login',data)
                       login(data).then((res)=>{
                         console.log(res);
-                        console.log(res.body.message);
+                        console.log(res);
                         if(res.status===200){
                             /*接口的传值是(0,密码错误)，检测管理员账号的值*/
-                            if(parseInt(res.body.ups) === 0){
+                            if(parseInt(res.ups) === 0){
                                 Toast( "用户不存在或信息错误，请重试！");
                                 this.userinfo.username=this.userinfo.password='';
-                            }else if(res.body.message.userps === 'admin'){
+                            }else if(res.data.userps === 'admin'){
                                 /*路由跳转this.$router.push*/
                                 ///检测管理员
                                 this.$router.push('/member/su');
@@ -77,7 +81,7 @@
                                 this.$store.commit('addUserName',this.userinfo.username);
                                 setCookie('username',this.userinfo.username,1000*60);
                                 setCookie('Admin',"admin",1000*60);
-                            }else if(parseInt(res.body.message.userps) === 1){
+                            }else if(parseInt(res.data.userps) === 1){
                                 Toast(  {
                                     message: "登录成功",
                                     duration: 1000

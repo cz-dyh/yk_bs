@@ -29,7 +29,10 @@
 </template>
 
 <script>
-    import {Toast} from 'mint-ui'
+  import {addUser} from '@api/commonApis'
+  import {Toast} from 'mint-ui'
+  import {setCookie,getCookie} from '../../assets/js/cookie.js'
+  import axios from 'axios'
     export default {
         name: "register",
         data(){
@@ -50,10 +53,17 @@
                     });
                     this.username=this.password=this.email=this.phone=''
                 }else {
-                    let data = {'username':this.username,'password':this.password,'email':this.email,'phone':this.phone,userps:this.userps};
-                    this.$http.post('api/adduser',data).then((res)=>{
+
+                    // let data = {'username':this.username,'password':this.password,'email':this.email,'phone':this.phone,userps:this.userps};
+                    let data=new FormData();
+                    data.append('username',this.username);
+                    data.append('password',this.password);
+                    data.append('email',this.email);
+                    data.append('phone',this.phone);
+                    data.append('userps',this.userps);
+                    addUser(data).then((res)=>{
                         console.log(res);
-                        console.log(res.body.list);
+                        console.log(res);
                         if(res.status === 200){
                            Toast({
                                message: "注册成功",
@@ -64,8 +74,8 @@
                             setTimeout(function(){
                               this.$router.push('/member/loginuser')
                             }.bind(this),1000);
-                        }else if(res.status === 100||res.status === 101){
-                            Toast("注册失败");
+                        }else if(res.status === 400||res.status === 101){
+                            Toast(res.message);
                         }
                     })
                 }

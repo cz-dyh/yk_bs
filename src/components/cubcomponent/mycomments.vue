@@ -39,8 +39,10 @@
 </template>
 
 <script>
-    import {setCookie,getCookie} from '../../assets/js/cookie.js'
-    import {Toast} from "mint-ui";
+  import {getUserComment} from '@api/commonApis'
+  import {Toast} from 'mint-ui'
+  import {setCookie,getCookie} from '../../assets/js/cookie.js'
+  import axios from 'axios'
     export default {
         name: "mycomments",
         data(){
@@ -52,15 +54,17 @@
         },
         methods:{
             getMyComments(){
-                var name = getCookie('username');
+                var tname = getCookie('username');
               //  console.log("http://127.0.0.1:5000/api/getusercomment?username="+name);
-                this.$http.get("api/getusercomment?username="+name).then(result=>{
+                let data=new FormData();
+                data.append("username",tname)
+                getUserComment(data).then(result=>{
                     if(result.status===200){
-                        console.log(result.body);
-                        if(result.body.message.length===0)
+                        console.log(result);
+                        if(result.data.length===0)
                             this.flag=true;
                         else {
-                            this.Mycomments=result.body.message;
+                            this.Mycomments=result.data;
                         }
                        // console.log('/***********'+this.Mycomments)
                     }

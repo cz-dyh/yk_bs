@@ -34,6 +34,7 @@
         }},
         methods:{
             getnewslist(){
+
                 this.$http.get('api/getallnews').then(result=>{
                     if(result.status===200){
                         //获取成功

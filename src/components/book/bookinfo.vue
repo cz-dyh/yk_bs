@@ -63,6 +63,9 @@
 <script>
     import comment from "../cubcomponent/comment.vue";
     import {Toast} from "mint-ui";
+    import {getBookById} from '@api/commonApis'
+    import {setCookie,getCookie} from '../../assets/js/cookie.js'
+    import axios from 'axios'
     export default {
         name: "bookinfo",
         components: {comment},
@@ -79,15 +82,17 @@
         },
         methods:{
             getBookInfo(id){
-                this.$http.get("api/bookinfo?id="+id).then(result=>{
-                    if(result.status===200){
-                        this.bookInfoList=result.body.message;
+                        let data=new FormData()
+                        data.append('id',id)
+                        getBookById(data).then(result=>{
+                        if(result.status===200){
+                        this.bookInfoList=result.data;
                        // console.log('888'+JSON.stringify(result.body.message.bookimg))
-                        this.$store.commit('addisbn',result.body.message.isbn);
-                        localStorage.setItem('isbn',result.body.message.isbn);
-                        this.$store.commit('addbookname',result.body.message.bookname);
-                        localStorage.setItem('bookname',result.body.message.bookname);
-                        if(parseInt(result.body.message.booknum)===0){
+                        this.$store.commit('addisbn',result.darta.isbn);
+                        localStorage.setItem('isbn',result.data.isbn);
+                        this.$store.commit('addbookname',result.data.bookname);
+                        localStorage.setItem('bookname',result.data.bookname);
+                        if(parseInt(result.data.booknum)===0){
                             this.flag=false;
                             this.flag1=!this.flag1;
                         }

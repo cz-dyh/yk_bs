@@ -19,7 +19,9 @@
 
 <script>
    import {Toast} from 'mint-ui'
-
+   import {getAllBook} from '@api/commonApis'
+   import {setCookie,getCookie} from '../../assets/js/cookie.js'
+   import axios from 'axios'
     export default {
         name: "bookComponent",
         data(){
@@ -30,10 +32,11 @@
         },
         methods:{
             getBookList(){
-                this.$http.get('api/getallbook').then(result=>{
+              getAllBook().then(result=>{
+                  console.log('kkk')
                     if(result.status===200){
                         //console.log(result.body.message.results[0]);
-                        this.bookList=result.body.message.results;
+                        this.bookList=result.data;
 
                     }
                 })
