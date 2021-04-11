@@ -15,7 +15,7 @@
     <!--底部导航-->
     <!--底部  tarbar区域-->
     <nav class="mui-bar mui-bar-tab mytarbar">
-      <router-link class="mui-tab-item1 " to="/home">
+      <router-link class="mui-tab-item1 " to="/homePage">
         <span class="mui-icon mui-icon-home"></span>
         <span class="mui-tab-label">首页</span>
       </router-link>
@@ -23,12 +23,6 @@
         <span class="mui-icon mui-icon-extra mui-icon-extra-xiaoshuo"></span>
         <span class="mui-tab-label">图书</span>
       </router-link>
-
-      <!---<router-link class="mui-tab-item1" to="/shopcar">
-         <span class="mui-icon mui-icon-extra mui-icon-extra-cart">
-             <span class="mui-badge">0</span></span>
-         <span class="mui-tab-label">购物车</span>
-     </router-link>-->
       <router-link class="mui-tab-item1" to="/member">
         <span class="mui-icon mui-icon-contact"></span>
         <span class="mui-tab-label">我的</span>
@@ -52,11 +46,12 @@ export default {
       }else {
           this.flag=true
       }*/
-    this.flag=this.$route.path==="/home"?false:true;
+    this.flag=this.$route.path !== "/homePage";
+    this.$router.push('/homePage')
   },
   watch:{
     '$route.path':function (newVal) {
-      if(newVal==="/home"){
+      if(newVal==="/homePage"){
         this.flag=false
       }else {
         this.flag=true

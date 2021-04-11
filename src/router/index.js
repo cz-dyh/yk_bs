@@ -22,6 +22,7 @@ import userAd from "../components/root/userAd.vue";
 import orderBookManage from "../components/root/BookCommentsManage.vue";
 import suggest from "../components/cubcomponent/suggest.vue";
 import suggestdeal from "../components/root/suggestdeal.vue";
+import homeComponent from "../components/tarbar/HomeComponent"
 
 Vue.use(Router)
 
@@ -29,7 +30,11 @@ export default new Router({
   routes:
     [
       {path:'/',redirect:'/home'},
-      {path:'/home',component:()=>import('@page/mainView')},
+      {
+        path:'/home',
+        component:()=>import('@page/mainView'),
+      },
+      {path:'/homePage',component:homeComponent},
       {path:'/member',component:MemberCompenent},
       {path:'/member/version',component:versionInfo},
       {path:'/member/loginuser',component:login},

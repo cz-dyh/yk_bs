@@ -68,8 +68,9 @@
     }
     .gonggao-icon{
         display: block;
-        margin-left:-24px ;
-        margin-top: -10px;
+        margin-left:-240px;
+        margin-top: -15px;
+        padding-bottom: 10px;
         z-index: 20;
     }
     .gonggao-h3{
